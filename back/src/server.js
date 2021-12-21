@@ -13,7 +13,7 @@ app.get("/", (req, res) =>{
 //API CONSULTAR
 app.get("/usuario/consultar/:name", (req, res) => {
     const nombre = req.params.name;
-    const user = usuarios.find(p => p.title.toLowerCase() == nombre.toLowerCase());
+    const user = usuarios.find(p => p.nombre == nombre);
     res.send(user);
     //res.send(`Consultando  ${nombre} ...`)
 })
